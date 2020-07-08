@@ -19,7 +19,7 @@ const {
     GITHUB_WORKFLOW: ghwrkflw
 } = process.env;
 
-const bot=new Bot(tgtoken)
+const bot=new Bot(1317969693:AAFnQ8mnDaI41m8LBL6zZV4VgiHzYDf7WFY)
 
 const evresp = (gevent) => {
     switch (gevent) {

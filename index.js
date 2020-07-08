@@ -27,15 +27,16 @@ const evresp = (gevent) => {
             return `
 🔃🔀🔃🔀🔃🔀
 
+The Following PR was sucessfully merge to beta-release:
+
 PR ${prstate} 
         
-PR Number:      ${pnum}
-        
-PR Title:       ${ptitle}
-        
-PR Body:        *${pbody}*
-        
+PR Number:      ${pnum}        
+PR Title:       ${ptitle}      
+PR Body:        *${pbody}*      
 PR By:          ${ghactor}
+
+Please consider to sync develop and staging branches with merged commits right away.
         
 [Link to Repo ](https://github.com/${repo}/)
         

@@ -22,44 +22,11 @@ const {
 const bot = new Bot(tgtoken)
 
 const evresp = (gevent) => {
-    switch (gevent) {
-
-        case "issues":
-            return `
-❗️❗️❗️❗️❗️❗️
-        
-Issue ${prstate}
-
-Issue Title and Number  : ${ititle} | #${inum}
-
-Commented or Created By : \`${iactor}\`
-
-Issue Body : *${ibody}*
-
-[Link to Issue](https://github.com/${repo}/issues/${inum})
-[Link to Repo ](https://github.com/${repo}/)
-[Build log here](https://github.com/${repo}/commit/${sha}/checks)`
-        case "issue_comment":
-            return `
-🗣🗣🗣🗣🗣🗣
-
-Issue ${prstate}
-
-Issue Title and Number  : ${ititle} | #${inum}
-
-Commented or Created By : \`${iactor}\`
-
-Issue Body : *${ibody}*
-
-Issue Comment: \`${process.env.INPUT_IU_COM}\`
-
-[Link to Issue](https://github.com/${repo}/issues/${inum})
-[Link to Repo ](https://github.com/${repo}/)
-[Build log here](https://github.com/${repo}/commit/${sha}/checks)
-            `
+    switch (gevent) {           
         case "pull_request":
             return `
 🔃🔀🔃🔀🔃🔀
+
 PR ${prstate} 
         
 PR Number:      ${pnum}
@@ -70,37 +37,8 @@ PR Body:        *${pbody}*
         
 PR By:          ${ghactor}
         
-[Link to Issue](https://github.com/${repo}/pull/${pnum})
 [Link to Repo ](https://github.com/${repo}/)
-[Build log here](https://github.com/${repo}/commit/${sha}/checks)`
-        case "watch":
-            return `
-⭐️⭐️⭐️
-
-By:            *${ghactor}* 
         
-\`Repository:  ${repo}\` 
-        
-Star Count      ${process.env.INPUT_STARGAZERS}
-        
-Fork Count      ${process.env.INPUT_FORKERS}
-        
-[Link to Repo ](https://github.com/${repo}/)
-            `
-        case "schedule":
-            return `
-⏱⏰⏱⏰⏱⏰
-        
-ID: ${ghwrkflw}
-        
-Run *${ipstatus}!*
-        
-*Action was Run on Schedule*
-        
-\`Repository:  ${repo}\` 
-        
-[Link to Repo ](https://github.com/${repo}/)
-            `
         default:
             return `
 ⬆️⇅⬆️⇅

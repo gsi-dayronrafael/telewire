@@ -2,8 +2,8 @@ require("dotenv").config
 const Bot=require('node-telegram-bot-api');
 const {
     INPUT_STATUS: ipstatus,
-    INPUT_TOKEN: tgtoken,
-    INPUT_CHAT: chatid,
+    INPUT_TOKEN: 1317969693:AAFnQ8mnDaI41m8LBL6zZV4VgiHzYDf7WFY,
+    INPUT_CHAT: 629769208,
     INPUT_IU_TITLE: ititle,
     INPUT_IU_NUM: inum,
     INPUT_IU_ACTOR: iactor,

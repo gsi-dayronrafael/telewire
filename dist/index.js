@@ -13942,14 +13942,11 @@ const evresp = (gevent) => {
       return `
 *El siguiente PR se mezcló en beta-release:*
          
-PR #:         
-${pnum}        
-PR título:    
-${ptitle}           
+#:${pnum} ${ptitle}           
 PR por:       
 ${ghactor}
 
-Por favor recuerde actualizar las ramas: develop y staging cuanto antes.
+Por favor recuerde actualizar las ramas: develop y staging.
         
 [Enlace al repo ](https://github.com/${repo}/)`;
   }

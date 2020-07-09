@@ -25,8 +25,7 @@ const evresp = (gevent) => {
     switch (gevent) {           
         case "pull_request":
             return `
-
-The Following PR was sucessfully merge to beta-release:
+The Following PR was sucessfully merged to beta-release:
 PR ${prstate}         
 PR Number:      ${pnum}        
 PR Title:       ${ptitle}      

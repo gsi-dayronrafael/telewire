@@ -13940,15 +13940,16 @@ const evresp = (gevent) => {
   switch (gevent) {
     case "pull_request":
       return `
-*El siguiente PR se mezcló correctamente en beta-release:*
+*El siguiente PR se mezcló en beta-release:*
+         
+PR #:         
+${pnum}        
+PR título:    
+${ptitle}           
+PR por:       
+${ghactor}
 
-PR estado :   ${prstate}         
-PR #:         ${pnum}        
-PR título:    ${ptitle}      
-PR descr:     ${pbody}      
-PR por:       ${ghactor}
-
-Por favor actualize las ramas: develop y staging, inmediatamente!!!
+Por favor recuerde actualizar las ramas: develop y staging cuanto antes.
         
 [Enlace al repo ](https://github.com/${repo}/)`;
   }

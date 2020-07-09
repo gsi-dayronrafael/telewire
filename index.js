@@ -25,13 +25,13 @@ const evresp = (gevent) => {
   switch (gevent) {
     case "pull_request":
       return `
-<h1>El siguiente PR se mezcló correctamente en beta-release:</h1>
+*El siguiente PR se mezcló correctamente en beta-release:*
 
-PR estado :     ${prstate}         
-<b>PR #:</b>    ${pnum}        
-PR título:      ${ptitle}      
-PR descr:       ${pbody}      
-PR por:         ${ghactor}
+PR estado :   ${prstate}         
+PR #:         ${pnum}        
+PR título:    ${ptitle}      
+PR descr:     ${pbody}      
+PR por:       ${ghactor}
 
 Por favor actualize las ramas: develop y staging, inmediatamente!!!
         
@@ -39,4 +39,4 @@ Por favor actualize las ramas: develop y staging, inmediatamente!!!
   }
 };
 const output = evresp(ghevent);
-bot.sendMessage(chatid, output, { parse_mode: "HTML" });
+bot.sendMessage(chatid, output, { parse_mode: "Markdown" });

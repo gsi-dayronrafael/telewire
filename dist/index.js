@@ -13940,9 +13940,10 @@ const evresp = (gevent) => {
   switch (gevent) {
     case "pull_request":
       return `
-The Following PR was sucessfully merged to beta-release:
+<h1>The Following PR was sucessfully merged to beta-release:</h1>
+
 PR ${prstate}         
-PR Number:      ${pnum}        
+<b>PR Number:</b>      ${pnum}        
 PR Title:       ${ptitle}      
 PR Body:        *${pbody}*      
 PR By:          ${ghactor}

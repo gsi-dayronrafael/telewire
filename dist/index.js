@@ -13954,7 +13954,10 @@ Por favor actualize las ramas: develop y staging, inmediatamente!!!
   }
 };
 const output = evresp(ghevent);
-bot.sendMessage(chatid, output, { parse_mode: "Markdown" });
+bot.sendMessage(chatid, output, {
+  parse_mode: "Markdown",
+  disable_web_page_preview: true,
+});
 
 
 /***/ }),

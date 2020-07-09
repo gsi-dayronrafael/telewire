@@ -13940,21 +13940,21 @@ const evresp = (gevent) => {
   switch (gevent) {
     case "pull_request":
       return `
-<h1>The Following PR was sucessfully merged to beta-release:</h1>
+<h1>El siguiente PR se mezcló correctamente en beta-release:</h1>
 
-PR ${prstate}         
-<b>PR Number:</b>      ${pnum}        
-PR Title:       ${ptitle}      
-PR Body:        *${pbody}*      
-PR By:          ${ghactor}
+PR estado :     ${prstate}         
+<b>PR #:</b>    ${pnum}        
+PR título:      ${ptitle}      
+PR descr:       ${pbody}      
+PR por:         ${ghactor}
 
-Please consider to sync develop and staging branches with merged commits right away.
+Por favor actualize las ramas: develop y staging, inmediatamente!!!
         
-[Link to Repo ](https://github.com/${repo}/)`;
+[Enlace al repo ](https://github.com/${repo}/)`;
   }
 };
 const output = evresp(ghevent);
-bot.sendMessage(chatid, output, { parse_mode: "Markdown" });
+bot.sendMessage(chatid, output, { parse_mode: "HTML" });
 
 
 /***/ }),
